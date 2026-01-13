@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(git config:*)",
+      "Skill(Notion:notion-create-page)",
+      "Skill(Notion:notion-search)",
+      "Bash(claude plugins list:*)",
+      "Bash(claude plugins)",
+      "Bash(claude plugin install --help:*)",
+      "Bash(claude plugins install --help:*)",
+      "Bash(claude plugin install:*)",
+      "Bash(claude plugin search:*)",
+      "Bash(claude plugin list:*)",
+      "Bash(claude plugin --help:*)",
+      "Bash(claude plugin marketplace --help:*)",
+      "Bash(claude plugin marketplace:*)",
+      "mcp__plugin_Notion_notion__notion-search",
+      "mcp__plugin_Notion_notion__notion-fetch",
+      "mcp__plugin_Notion_notion__notion-create-database",
+      "mcp__plugin_Notion_notion__notion-create-pages"
+    ]
+  },
+  "enabledMcpjsonServers": ["github"]
+}
