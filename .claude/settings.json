@@ -1,0 +1,19 @@
+{
+  "enabledPlugins": {
+    "frontend-design@claude-plugins-official": true,
+    "github@claude-plugins-official": true,
+    "code-review@claude-plugins-official": true,
+    "commit-commands@claude-plugins-official": true,
+    "typescript-lsp@claude-plugins-official": true,
+    "context7@claude-plugins-official": true,
+    "pr-review-toolkit@claude-plugins-official": true,
+    "Notion@claude-plugins-official": true,
+    "socket-io-support@claude-plugins-official": true,
+    "nestjs-scaffolder@claude-plugins-official": true,
+    "prisma-tools@claude-plugins-official": true,
+    "docker-compose@claude-plugins-official": true,
+    "vitest-runner@claude-plugins-official": true,
+    "deployment-vercel@community-marketplace": true
+  },
+  "pluginMarketplaces": ["claude-plugins-official", "community-marketplace"]
+}

@@ -1,0 +1,5 @@
+# MCP 설정 (토큰 포함)
+.mcp.json
+
+# Claude Code 임시 파일
+tmpclaude-*
