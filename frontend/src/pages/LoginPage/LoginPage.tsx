@@ -62,8 +62,15 @@ export const LoginPage: React.FC = () => {
         </div>
 
         <p className={styles.terms}>
-          로그인하면 <a href="/terms">이용약관</a> 및{' '}
-          <a href="/privacy">개인정보처리방침</a>에 동의하게 됩니다.
+          로그인하면{' '}
+          <a href="#terms" onClick={(e) => e.preventDefault()}>
+            이용약관
+          </a>{' '}
+          및{' '}
+          <a href="#privacy" onClick={(e) => e.preventDefault()}>
+            개인정보처리방침
+          </a>
+          에 동의하게 됩니다.
         </p>
       </div>
     </div>

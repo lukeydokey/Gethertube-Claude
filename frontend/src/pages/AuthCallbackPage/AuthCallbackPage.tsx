@@ -20,6 +20,11 @@ export const AuthCallbackPage: React.FC = () => {
     const token = searchParams.get('token');
     const errorParam = searchParams.get('error');
 
+    // Remove token from URL immediately for security
+    if (token || errorParam) {
+      window.history.replaceState({}, '', '/auth/callback');
+    }
+
     if (errorParam) {
       navigate('/login', {
         state: { error: '로그인에 실패했습니다. 다시 시도해주세요.' },
@@ -36,9 +41,16 @@ export const AuthCallbackPage: React.FC = () => {
       return;
     }
 
-    setAuthFromCallback(token).then(() => {
-      navigate('/', { replace: true });
-    });
+    setAuthFromCallback(token)
+      .then(() => {
+        navigate('/', { replace: true });
+      })
+      .catch(() => {
+        navigate('/login', {
+          state: { error: '인증 처리 중 오류가 발생했습니다.' },
+          replace: true,
+        });
+      });
   }, [searchParams, navigate, setAuthFromCallback]);
 
   if (error) {

@@ -1,8 +1,6 @@
 import api from './api';
 import type { User } from '@/types/auth.types';
 
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:3001';
-
 /**
  * Authentication service for Google OAuth
  */
@@ -12,7 +10,8 @@ export const authService = {
    * Redirects user to Google consent screen
    */
   getGoogleLoginUrl(): string {
-    return `${API_BASE_URL}/auth/google`;
+    const baseUrl = process.env.REACT_APP_API_URL || 'http://localhost:3001';
+    return `${baseUrl}/auth/google`;
   },
 
   /**

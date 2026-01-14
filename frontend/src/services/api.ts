@@ -35,9 +35,12 @@ api.interceptors.response.use(
   (response) => response,
   (error: AxiosError) => {
     if (error.response?.status === 401) {
-      // Token expired or invalid - clear auth state
-      localStorage.removeItem('accessToken');
-      window.location.href = '/login';
+      const currentPath = window.location.pathname;
+      // Prevent infinite redirect loop
+      if (currentPath !== '/login' && currentPath !== '/auth/callback') {
+        localStorage.removeItem('accessToken');
+        window.location.href = '/login';
+      }
     }
     return Promise.reject(error);
   }

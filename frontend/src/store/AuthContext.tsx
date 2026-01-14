@@ -1,5 +1,5 @@
 import React, { createContext, useCallback, useEffect, useState } from 'react';
-import type { AuthContextValue, AuthState, User } from '@/types/auth.types';
+import type { AuthContextValue, AuthState } from '@/types/auth.types';
 import authService from '@/services/auth.service';
 
 const initialState: AuthState = {
@@ -53,7 +53,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   }, []);
 
   useEffect(() => {
-    initializeAuth();
+    void initializeAuth();
   }, [initializeAuth]);
 
   /**
