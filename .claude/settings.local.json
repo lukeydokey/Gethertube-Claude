@@ -29,7 +29,11 @@
       "mcp__github__get_pull_request",
       "mcp__github__get_pull_request_files",
       "mcp__github__get_file_contents",
-      "mcp__github__create_pull_request_review"
+      "mcp__github__create_pull_request_review",
+      "mcp__github__get_pull_request_comments",
+      "mcp__github__get_pull_request_reviews",
+      "Bash(pnpm --filter frontend add:*)",
+      "Bash(npm run test:*)"
     ]
   },
   "enabledMcpjsonServers": [
